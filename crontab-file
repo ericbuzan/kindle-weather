@@ -1,0 +1,10 @@
+#place this at /etc/crontab/root
+
+*/15 * * * * /usr/sbin/checkpmond
+*/15 * * * * /usr/sbin/tinyrot
+*/60 * * * * /usr/sbin/loginfo tmpfs
+*/60 * * * * /usr/sbin/loginfo localVars
+*/60 * * * * /usr/sbin/loginfo memusedump
+*/15 * * * * /usr/sbin/loginfo powerdcheck
+* * * * * /mnt/us/screensaver/weather.sh
+@reboot /mnt/us/screensaver/prepdebian.sh
